@@ -7,7 +7,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-[![Python](https://img.shields.io/badge/python-3.8+-orange.svg)](https://python.org)
+[![Python](https://img.shields.io/badge/python-3.10+-orange.svg)](https://python.org)
 ---
 
 ## 📖 Mục lục
