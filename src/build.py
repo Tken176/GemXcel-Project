@@ -55,16 +55,18 @@ def check_requirements():
     return True, icon_path
 
 def install_requirements():
-    """Cài đặt PyInstaller + Pillow"""
+    """Cài đặt PyInstaller + Pillow + Pygame"""
     requirements = [
         ("pyinstaller", "PyInstaller"),
         ("pillow", "PIL"),
+        ("pygame", "pygame"),   # 👈 thêm pygame
     ]
     ok = True
     for pkg, import_name in requirements:
         if not install_package(pkg, import_name):
             ok = False
     return ok
+
 
 def collect_all_files():
     """Thu thập tất cả file và thư mục cần đóng gói"""
