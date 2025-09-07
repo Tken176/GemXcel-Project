@@ -55,18 +55,18 @@ def check_requirements():
     return True, icon_path
 
 def install_requirements():
-    """Cài đặt PyInstaller + Pillow + Pygame"""
+    """Cài đặt PyInstaller + Pillow + Pygame + CustomTkinter"""
     requirements = [
         ("pyinstaller", "PyInstaller"),
         ("pillow", "PIL"),
-        ("pygame", "pygame"),   # 👈 thêm pygame
+        ("pygame", "pygame"),
+        ("customtkinter", "customtkinter"),  # 👈 thêm customtkinter
     ]
     ok = True
     for pkg, import_name in requirements:
         if not install_package(pkg, import_name):
             ok = False
     return ok
-
 
 def collect_all_files():
     """Thu thập tất cả file và thư mục cần đóng gói"""
@@ -102,11 +102,26 @@ def collect_all_files():
     print(f"📊 Tìm thấy {len(data_files)} file để đóng gói")
     return data_files
 
+def get_customtkinter_hooks():
+    """Thêm các hook cần thiết cho CustomTkinter"""
+    hooks = []
+    
+    # Hook cho customtkinter
+    hooks.extend([
+        "--hidden-import=customtkinter",
+        "--hidden-import=tkinter",
+        "--hidden-import=tkinter.ttk",
+        "--collect-all=customtkinter",
+    ])
+    
+    return hooks
+
 def build_executable(icon_path=None):
     """Thực hiện đóng gói bằng PyInstaller"""
     print("🔨 Bắt đầu quá trình đóng gói...")
 
     data_files = collect_all_files()
+    hooks = get_customtkinter_hooks()
 
     cmd = [
         sys.executable, "-m", "PyInstaller",
@@ -115,6 +130,9 @@ def build_executable(icon_path=None):
         "--name=GemXcel",
         "--clean",
     ]
+    
+    # Thêm các hook cho customtkinter
+    cmd.extend(hooks)
     
     if icon_path and os.path.exists(icon_path):
         cmd.append(f"--icon={icon_path}")
@@ -129,6 +147,7 @@ def build_executable(icon_path=None):
         subprocess.run(cmd, check=True, capture_output=True, text=True, encoding='utf-8')
         print("✅ Đóng gói thành công!")
         
+        # Copy icon nếu có
         if icon_path and os.path.exists(icon_path):
             dist_dir = Path("dist") / "GemXcel"
             if dist_dir.exists():
@@ -138,6 +157,25 @@ def build_executable(icon_path=None):
                     print(f"🖼️ Đã copy icon vào dist: {icon_dst}")
                 except Exception as e:
                     print(f"⚠️ Không thể copy icon: {e}")
+        
+        # Kiểm tra và copy theme files của customtkinter nếu cần
+        try:
+            import customtkinter
+            import site
+            
+            # Tìm đường dẫn của customtkinter
+            ctk_path = Path(customtkinter.__file__).parent
+            assets_path = ctk_path / "assets"
+            
+            if assets_path.exists():
+                dist_assets = Path("dist") / "GemXcel" / "customtkinter" / "assets"
+                dist_assets.parent.mkdir(exist_ok=True)
+                if dist_assets.exists():
+                    shutil.rmtree(dist_assets)
+                shutil.copytree(assets_path, dist_assets)
+                print("🎨 Đã copy theme files của CustomTkinter")
+        except Exception as e:
+            print(f"⚠️ Không thể copy theme files: {e}")
         
         return True
     except subprocess.CalledProcessError as e:
