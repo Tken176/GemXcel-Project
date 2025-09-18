@@ -45,7 +45,6 @@ Mục tiêu: tạo một môi trường học tập vui vẻ, tăng động lự
 ---
 
 ## 🔧 Cài đặt
-### Có 2 Cách để cài đặt:
 ### *Cách 1: 
 
 Bước 1: Tải file ``` .zip ``` từ github:
