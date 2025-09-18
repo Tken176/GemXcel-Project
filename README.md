@@ -1,4 +1,6 @@
-# 🌟 GemXcel Project
+# 🌟 GemXcel Project (Đang trong giai đoạn phát triển)
+
+![GemXcel Logo](https://sf-static.upanhlaylink.com/img/image_2025081939b154f7796f5fd26683315cdd3dbb2a.jpg)
 
 > **GemXcel** là một ứng dụng học tập kết hợp **gamification** (game hóa) giúp học sinh vừa học vừa chơi.  
 > Dự án do học sinh lớp 11, Trường THPT Chuyên Bến Tre phát triển với mục tiêu mang lại trải nghiệm học tập thú vị, sáng tạo và có tính tương tác cao.
@@ -13,7 +15,6 @@
 ## 📖 Mục lục
 - [Giới thiệu](#-giới-thiệu)
 - [Tính năng](#-tính-năng)
-- [Ảnh minh họa](#-ảnh-minh-họa)
 - [Cài đặt](#-cài-đặt)
 - [Cách sử dụng](#-cách-sử-dụng)
 - [Cấu trúc thư mục](#-cấu-trúc-thư-mục)
@@ -40,52 +41,27 @@ Mục tiêu: tạo một môi trường học tập vui vẻ, tăng động lự
 | 👤 **Tài khoản** | Lưu trữ thông tin người dùng, điểm số, tiến độ học tập. |
 | ⚙️ **Cài đặt** | Tùy chỉnh âm thanh, theme, và các tuỳ chọn khác. |
 
----
-
-## 🖼 Ảnh minh họa
-![GemXcel Logo](https://sf-static.upanhlaylink.com/img/image_2025081939b154f7796f5fd26683315cdd3dbb2a.jpg)
 
 ---
 
 ## 🔧 Cài đặt
+### Có 2 Cách để cài đặt:
+### *Cách 1: 
 
-### Yêu cầu
-- Python **3.10+**
-- pip
-
-### Cách cài
-# 🚀 Hướng dẫn chạy GemXcel (phiên bản exe)
-
-## 📥 1. Tải dự án từ GitHub
-1. Vào trang GitHub dự án:  
-   👉 [GemXcel Project](https://github.com/username/GemXcel-Project)  
-2. Nhấn **Code → Download ZIP**.  
-3. Giải nén file `.zip` vừa tải về.
-
----
-
-## 🛠 2. Build ra file `.exe`
-1. Mở **Command Prompt (cmd)** tại thư mục vừa giải nén.  
-2. Chạy lệnh sau để build:
+Bước 1: Tải file ``` .zip ``` từ github:
 ```bash
-python build.py
+https://github.com/Tken176/GemXcel-Project
 ```
-👉 Sau khi build xong, bạn sẽ có thư mục:
+Bước 2: Giải nén bằng trình giải nén của máy tính
+
+Bước 3: Nhấn đúp vào file ```download.bat``` chương trình sẽ tự động mở console và tự cài đặt mọi thứ cần thiết (mất khoảng 2-3 phút)
+
+Bước 4: Vào thư mục ```dist``` có đường dẫn: 
 ```bash
-dist/
-└── GemXcel/
-    ├── GemXcel.exe   ← file chạy chính
-    ├── assets/       ← chứa hình ảnh, âm thanh
-    └── data/         ← chứa file lessons, quiz
-
-▶️ 3. Chạy ứng dụng
-Vào thư mục: dist/GemXcel/
-
-Nhấp đúp vào file: GemXcel.exe
-
-Ứng dụng sẽ chạy ngay mà không cần cài Python hoặc thư viện phụ thuộc.
+GemXcel-Project-main\src\dist
 ```
-
+rồi nhấn đúp vào ```GemXcel.exe``` để chạy chương trình
+### *Cách 2:(Đang phát triển)
 > ⚠️ **Lưu ý
 Khi copy ứng dụng sang máy khác, cần copy nguyên thư mục GemXcel/ chứ không chỉ riêng GemXcel.exe.
 
@@ -97,8 +73,8 @@ Khi copy ứng dụng sang máy khác, cần copy nguyên thư mục GemXcel/ ch
 
 ### 📖 Hướng dẫn cơ bản
 
-1. **Khởi động ứng dụng**: Mở GemXcel.exe
-2. **Tải tài liệu**: Nhấn "Upload" và chọn file học liệu
+1. **Khởi động ứng dụng**
+2. **Tải tài liệu**: Nhấn "Nạp FILE" và chọn file học liệu
 3. **Bắt đầu học**: Chọn bài học được tạo tự động
 4. **Làm bài kiểm tra**: Hoàn thành quiz để nhận Gem
 5. **Mua sắm**: Sử dụng Gem trong cửa hàng ảo
