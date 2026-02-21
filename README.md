@@ -1,37 +1,36 @@
-# 🌟 GemXcel Project (Đang trong giai đoạn phát triển)
+# 🌟 GemXcel Project
 
 ![GemXcel Logo](https://sf-static.upanhlaylink.com/img/image_2025081939b154f7796f5fd26683315cdd3dbb2a.jpg)
 
-> **GemXcel** là một ứng dụng học tập kết hợp **gamification** (game hóa) giúp học sinh vừa học vừa chơi.  
+> **GemXcel** là một ứng dụng học tập kết hợp **gamification** (game hóa) giúp học sinh vừa học vừa chơi.
 > Dự án do học sinh lớp 11, Trường THPT Chuyên Bến Tre phát triển với mục tiêu mang lại trải nghiệm học tập thú vị, sáng tạo và có tính tương tác cao.
 
 [![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/Tken176/GemXcel-Project)
-
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-
 [![Python](https://img.shields.io/badge/python-3.10+-orange.svg)](https://python.org)
+
 ---
 
 ## 📖 Mục lục
+
 - [Giới thiệu](#-giới-thiệu)
 - [Tính năng](#-tính-năng)
 - [Cài đặt](#-cài-đặt)
 - [Cách sử dụng](#-cách-sử-dụng)
-- [Cấu trúc thư mục](#-cấu-trúc-thư-mục)
-- [Đóng góp](#-đóng-góp)
-- [Lộ trình phát triển](#-lộ-trình-phát-triển)
+- [Đội ngũ phát triển](#-đội-ngũ-phát-triển)
+- [Hỗ trợ & Liên hệ](#-hỗ-trợ--liên-hệ)
 - [Giấy phép](#-giấy-phép)
-- [Liên hệ](#-liên-hệ)
 
 ---
 
 ## 🚀 Giới thiệu
-**GemXcel** được xây dựng bằng Python (dùng [pygame] cho phần game) và có các thành phần học tập, quiz, cửa hàng, hệ thống tài khoản và bộ sưu tập gem.  
-Mục tiêu: tạo một môi trường học tập vui vẻ, tăng động lực thông qua **điểm, phần thưởng và thành tựu**.
+
+**GemXcel** được xây dựng bằng Python (dùng [pygame](https://www.pygame.org) cho phần game) và có các thành phần học tập, quiz, cửa hàng, hệ thống tài khoản và bộ sưu tập gem. Mục tiêu: tạo một môi trường học tập vui vẻ, tăng động lực thông qua **điểm, phần thưởng và thành tựu**.
 
 ---
 
 ## 🎮 Tính năng
+
 | Tính năng | Mô tả |
 |-----------|-------|
 | 📚 **Bài học** | Cung cấp kiến thức dạng gọn nhẹ, kèm hình minh họa. |
@@ -39,32 +38,32 @@ Mục tiêu: tạo một môi trường học tập vui vẻ, tăng động lự
 | 💎 **Gem Collection** | Học và làm quiz để nhận gem, có thể trưng bày trong bộ sưu tập. |
 | 🛒 **Shop** | Đổi gem lấy vật phẩm trang trí hoặc bonus trong game. |
 | 👤 **Tài khoản** | Lưu trữ thông tin người dùng, điểm số, tiến độ học tập. |
-|⚙️ **Cài đặt** | Tùy chỉnh âm thanh, theme, và các tuỳ chọn khác. |
-
+| ⚙️ **Cài đặt** | Tùy chỉnh âm thanh, theme, và các tuỳ chọn khác. |
 
 ---
 
 ## 🔧 Cài đặt
-### *Cách 1: 
 
-Bước 1: Tải file ``` .zip ``` từ github:
-```bash
-https://github.com/Tken176/GemXcel-Project
-```
-Bước 2: Giải nén bằng trình giải nén của máy tính
+### ⭐ Cách 1 — Tải bản cài đặt chính thức (Khuyến nghị)
 
-Bước 3: Nhấn đúp vào file ```download.bat``` chương trình sẽ tự động mở console và tự cài đặt mọi thứ cần thiết (mất khoảng 2-3 phút)
+1. Vào trang [Releases](https://github.com/Tken176/GemXcel-Project/releases) của dự án và tải file `GemXcel_Setup.exe`
+2. Nhấn đúp để cài đặt và làm theo hướng dẫn
+3. Mở game từ Desktop hoặc Start Menu
 
-Bước 4: Vào thư mục ```dist``` có đường dẫn: 
-```bash
-GemXcel-Project-main\src\dist
-```
-rồi nhấn đúp vào ```GemXcel.exe``` để chạy chương trình
-### *Cách 2:(Đang phát triển)
-> ⚠️ **Lưu ý
-Khi copy ứng dụng sang máy khác, cần copy nguyên thư mục GemXcel/ chứ không chỉ riêng GemXcel.exe.
+### 🧩 Cách 2 — Chạy bản portable (không cần cài đặt)
 
-> ⚠️ **Lưu ý về bảo mật**: Một số phần mềm antivirus có thể báo cảnh báo với file `.exe` được tạo bởi PyInstaller. Đây là hiện tượng phổ biến với các ứng dụng Python được đóng gói. Vui lòng thêm GemXcel vào danh sách ngoại lệ của antivirus hoặc tải từ nguồn chính thức để đảm bảo an toàn.
+1. Tải source code từ [GitHub](https://github.com/Tken176/GemXcel-Project) (Download ZIP)
+2. Giải nén file ZIP
+3. Mở thư mục `GemXcel-Project-main\src\dist`
+4. Nhấn đúp vào `GemXcel.exe` để chạy chương trình
+
+### 🛠️ Cách 3 — Tự build từ source (dành cho người biết kỹ thuật)
+
+Dự án có sẵn file script Inno Setup (`.iss`). Yêu cầu cài phần mềm [Inno Setup](https://jrsoftware.org/isinfo.php).
+
+1. Mở file `.iss` bằng Inno Setup
+2. Nhấn **Compile**
+3. File Setup sẽ được tạo trong thư mục `Output`
 
 ---
 
@@ -85,29 +84,21 @@ Khi copy ứng dụng sang máy khác, cần copy nguyên thư mục GemXcel/ ch
 - 💡 Sử dụng tính năng "Hỏi AI" khi gặp khó khăn
 
 ---
+
 ## 👥 Đội ngũ phát triển
-Thành viên:    
 
-Đinh Minh Toàn 11 Lý
-
-Hồ Tấn Phát    11 Tin 
-
-Lý Gia Phúc    11 Lý
+| Họ tên | Lớp |
+|--------|-----|
+| Đinh Minh Toàn | 11 Lý |
 
 ---
 
-
 ## 📩 Hỗ trợ & Liên hệ
 
-### 🎯 Kênh hỗ trợ chính thức
-
-- 📧 **Email hỗ trợ**: [dinhminhtoan17062009@gmail.com](https://mail.google.com/mail/u/0/#inbox?compose=GTvVlcSKkwsmPGpHDNvVJTqcJdVvLwPPtzFSmpDHQLgHNTHVzfhtsTlQNdRvdZwMjJwFxvkCXbCxD)
+- 📧 **Email**: [dinhminhtoan17062009@gmail.com](mailto:dinhminhtoan17062009@gmail.com)
 - 🌐 **GitHub**: [https://github.com/Tken176](https://github.com/Tken176)
 - 💬 **Issues**: [GitHub Issues](https://github.com/Tken176/GemXcel-Project/issues)
-
-### 📱 Mạng xã hội
 - 🔗 **Facebook**: [Đinh Minh Toàn](https://www.facebook.com/minh.toan.708322/?locale=vi_VN)
-
 
 ---
 
@@ -123,4 +114,3 @@ Xin chân thành cảm ơn:
 - Các thầy cô giáo đã hướng dẫn và hỗ trợ
 - Cộng đồng open source đã đóng góp các thư viện và công cụ
 - Tất cả người dùng đã tin tưởng và sử dụng sản phẩm
-
